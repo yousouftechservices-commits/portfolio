@@ -157,7 +157,7 @@ if (menuToggle && navLinks) {
                 navLinks.classList.add("active");
                 menuToggle.setAttribute("aria-expanded", "true");
                 menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-            }, 800); // delay in milliseconds — lowered from 4000ms to 800ms since you said it was too much; adjust this number to taste
+            }, 400); // delay in milliseconds — lowered from 4000ms to 800ms since you said it was too much; adjust this number to taste
         }
 
     });
