@@ -188,13 +188,12 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 60px;
-  padding: 80px 6%;
-  min-height: 90vh;
+  padding: 100px 6%;
+  min-height: auto;
   background: var(--hero-gradient);
   color: #fff;
   flex-wrap: wrap;
 }
-
 .hero-text {
   flex: 1;
   min-width: 280px;
