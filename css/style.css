@@ -911,7 +911,7 @@ header {
 .footer-links a {
   color: var(--secondary);
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .footer-links a:hover,
@@ -961,7 +961,7 @@ header {
   color: white;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: 0.3s;
+  transition: 0.5s;
   z-index: 900;
 }
 
