@@ -144,14 +144,23 @@ if (menuToggle && navLinks) {
 
     menuToggle.addEventListener("click", () => {
 
-        const isOpen = navLinks.classList.toggle("active");
-        menuToggle.setAttribute("aria-expanded", String(isOpen));
-        menuToggle.innerHTML = isOpen
-            ? '<i class="fa-solid fa-xmark"></i>'
-            : '<i class="fa-solid fa-bars"></i>';
+        const isCurrentlyOpen = navLinks.classList.contains("active");
+
+        if (isCurrentlyOpen) {
+            // Closing — instant, no delay
+            navLinks.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        } else {
+            // Opening — delayed
+            setTimeout(() => {
+                navLinks.classList.add("active");
+                menuToggle.setAttribute("aria-expanded", "true");
+                menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            }, 800); // delay in milliseconds — lowered from 4000ms to 800ms since you said it was too much; adjust this number to taste
+        }
 
     });
-
 }
 
 document.querySelectorAll(".nav-links a").forEach(link => {
